@@ -1,0 +1,590 @@
+[
+  {
+    "id": "2613e0005f064173b08e448db94fe36a",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 11:46:44",
+    "created_at_ts": 1790230604.091834,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_847ab0dd_20260924_114644_091902.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_847ab0dd_20260924_114644_091902.jpg"
+  },
+  {
+    "id": "65e57e413e5c4a13aa17ec0a4815f98e",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 11:46:44",
+    "created_at_ts": 1790230604.0779345,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_9db13bf3_20260924_114644_078014.jpg",
+    "screenshot_url": "/uploads/incidents/fire_9db13bf3_20260924_114644_078014.jpg"
+  },
+  {
+    "id": "be0311c93d5a46808d40cdc001008d8a",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.525
+    },
+    "timestamp": "2026-09-24 11:44:09",
+    "created_at_ts": 1790230449.3326216,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_0a95bc7c_20260924_114409_337813.jpg",
+    "screenshot_url": "/uploads/incidents/fire_0a95bc7c_20260924_114409_337813.jpg"
+  },
+  {
+    "id": "e513fa1287b144e889dffe97e126aadf",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 11:23:42",
+    "created_at_ts": 1790229222.3334846,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_eb67a477_20260924_112342_333514.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_eb67a477_20260924_112342_333514.jpg"
+  },
+  {
+    "id": "fcdd79802cb749cea4b592bde1abfef0",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 11:23:42",
+    "created_at_ts": 1790229222.3267906,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_c403c5c6_20260924_112342_326819.jpg",
+    "screenshot_url": "/uploads/incidents/fire_c403c5c6_20260924_112342_326819.jpg"
+  },
+  {
+    "id": "f8fe6abb589b4c14ae18edfc5c525da2",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 11:07:53",
+    "created_at_ts": 1790228273.9513996,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_aae0f62e_20260924_110753_951443.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_aae0f62e_20260924_110753_951443.jpg"
+  },
+  {
+    "id": "9717372c98534a0b8f7a397e07c7f58d",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 11:07:53",
+    "created_at_ts": 1790228273.9362385,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_9d0e4b3e_20260924_110753_938152.jpg",
+    "screenshot_url": "/uploads/incidents/fire_9d0e4b3e_20260924_110753_938152.jpg"
+  },
+  {
+    "id": "d882d13a2ad74cb880cc9960c9b67bda",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 11:02:15",
+    "created_at_ts": 1790227935.265735,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_06644029_20260924_110215_265869.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_06644029_20260924_110215_265869.jpg"
+  },
+  {
+    "id": "5310258b0dc7410a999437bfe6a1980c",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 11:02:15",
+    "created_at_ts": 1790227935.2561398,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_f97edcbe_20260924_110215_256190.jpg",
+    "screenshot_url": "/uploads/incidents/fire_f97edcbe_20260924_110215_256190.jpg"
+  },
+  {
+    "id": "de56df98046b45f7b795217f2c789df1",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 11:01:16",
+    "created_at_ts": 1790227876.4749832,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_e57e8e45_20260924_110116_475053.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_e57e8e45_20260924_110116_475053.jpg"
+  },
+  {
+    "id": "c2038e0bab1d4aa9bd84701cd18808c7",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 11:01:16",
+    "created_at_ts": 1790227876.4437163,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_0d8f16e3_20260924_110116_445825.jpg",
+    "screenshot_url": "/uploads/incidents/fire_0d8f16e3_20260924_110116_445825.jpg"
+  },
+  {
+    "id": "2b44b19629d14c939c7dfd4c9b04d773",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.503
+    },
+    "timestamp": "2026-09-24 10:42:56",
+    "created_at_ts": 1790226776.891363,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_ddc2b581_20260924_104256_891466.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_ddc2b581_20260924_104256_891466.jpg"
+  },
+  {
+    "id": "889e918cac9643c6bce18df48108cf4a",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.323
+    },
+    "timestamp": "2026-09-24 10:42:38",
+    "created_at_ts": 1790226758.6405644,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_250ac5b8_20260924_104238_640672.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_250ac5b8_20260924_104238_640672.jpg"
+  },
+  {
+    "id": "3e02ccd99e1c47f7a1f016f39eea6642",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.262
+    },
+    "timestamp": "2026-09-24 10:42:20",
+    "created_at_ts": 1790226740.0457714,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_a7f37496_20260924_104220_045973.jpg",
+    "screenshot_url": "/uploads/incidents/fire_a7f37496_20260924_104220_045973.jpg"
+  },
+  {
+    "id": "28ddf59142fb4f5ea29ae3a79d084034",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.498
+    },
+    "timestamp": "2026-09-24 10:19:37",
+    "created_at_ts": 1790225376.9725864,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_6b3e217d_20260924_101936_978012.jpg",
+    "screenshot_url": "/uploads/incidents/fire_6b3e217d_20260924_101936_978012.jpg"
+  },
+  {
+    "id": "ccabb466b86d4883b28986ca7d9810dd",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-24 10:06:59",
+    "created_at_ts": 1790224619.3005168,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_366b9d99_20260924_100659_300613.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_366b9d99_20260924_100659_300613.jpg"
+  },
+  {
+    "id": "2a9bfbf0161a4fdda0938bef51b6d381",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-24 10:06:59",
+    "created_at_ts": 1790224619.2643347,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_071f3740_20260924_100659_268538.jpg",
+    "screenshot_url": "/uploads/incidents/fire_071f3740_20260924_100659_268538.jpg"
+  },
+  {
+    "id": "a5f2a3530092405794aade902fee0223",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.332
+    },
+    "timestamp": "2026-09-24 10:01:38",
+    "created_at_ts": 1790224297.864045,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_5251feae_20260924_100137_864262.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_5251feae_20260924_100137_864262.jpg"
+  },
+  {
+    "id": "cde376b5fffd4d72bccc515111d79ea9",
+    "type": "FIRE",
+    "source": "live",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.365
+    },
+    "timestamp": "2026-09-23 20:23:07",
+    "created_at_ts": 1790175187.4203553,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_48bd929b_20260923_202307_420393.jpg",
+    "screenshot_url": "/uploads/incidents/fire_48bd929b_20260923_202307_420393.jpg"
+  },
+  {
+    "id": "163f353870844a9c86923a83f521f351",
+    "type": "FIRE",
+    "source": "live",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.298
+    },
+    "timestamp": "2026-09-23 20:21:17",
+    "created_at_ts": 1790175077.1003876,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_bbc538b5_20260923_202117_101380.jpg",
+    "screenshot_url": "/uploads/incidents/fire_bbc538b5_20260923_202117_101380.jpg"
+  },
+  {
+    "id": "82ddf5f19edb4066b57c2e472e7c61b9",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.278
+    },
+    "timestamp": "2026-09-23 20:17:54",
+    "created_at_ts": 1790174874.8749886,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_6d3287ef_20260923_201754_875032.jpg",
+    "screenshot_url": "/uploads/incidents/fire_6d3287ef_20260923_201754_875032.jpg"
+  },
+  {
+    "id": "d63795ecdddf460d9a7683123beb4e3c",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.522
+    },
+    "timestamp": "2026-09-23 20:17:44",
+    "created_at_ts": 1790174864.7871346,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_fed44c05_20260923_201744_787204.jpg",
+    "screenshot_url": "/uploads/incidents/fire_fed44c05_20260923_201744_787204.jpg"
+  },
+  {
+    "id": "017cab52364944fc9400139f8c1c9cf7",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.824
+    },
+    "timestamp": "2026-09-23 20:17:34",
+    "created_at_ts": 1790174854.5872855,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_d6afaa1d_20260923_201734_587327.jpg",
+    "screenshot_url": "/uploads/incidents/fire_d6afaa1d_20260923_201734_587327.jpg"
+  },
+  {
+    "id": "b63a8626c1274176a650c7ee6d382cff",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.637
+    },
+    "timestamp": "2026-09-23 20:17:24",
+    "created_at_ts": 1790174844.5601184,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_9c425b01_20260923_201724_560166.jpg",
+    "screenshot_url": "/uploads/incidents/fire_9c425b01_20260923_201724_560166.jpg"
+  },
+  {
+    "id": "f34c8ca559c143cb833097d9e488c2ae",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.693
+    },
+    "timestamp": "2026-09-23 20:17:13",
+    "created_at_ts": 1790174833.2378402,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_4af51f86_20260923_201713_237901.jpg",
+    "screenshot_url": "/uploads/incidents/fire_4af51f86_20260923_201713_237901.jpg"
+  },
+  {
+    "id": "d964a5931c0c46d4aac15ceb4b44f879",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.767
+    },
+    "timestamp": "2026-09-23 20:17:03",
+    "created_at_ts": 1790174823.0357819,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_4881ab99_20260923_201703_035857.jpg",
+    "screenshot_url": "/uploads/incidents/fire_4881ab99_20260923_201703_035857.jpg"
+  },
+  {
+    "id": "89c3412b4d1e48729e12ff866b90e9f4",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.676
+    },
+    "timestamp": "2026-09-23 20:16:56",
+    "created_at_ts": 1790174816.1557732,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_fa267313_20260923_201656_155880.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_fa267313_20260923_201656_155880.jpg"
+  },
+  {
+    "id": "21fc20c158004c6590f50c42a44adbe6",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.623
+    },
+    "timestamp": "2026-09-23 20:16:52",
+    "created_at_ts": 1790174812.7681048,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_1cdb264f_20260923_201652_768149.jpg",
+    "screenshot_url": "/uploads/incidents/fire_1cdb264f_20260923_201652_768149.jpg"
+  },
+  {
+    "id": "43d394b54cf6494e97253738bc27a11f",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.624
+    },
+    "timestamp": "2026-09-23 20:16:46",
+    "created_at_ts": 1790174806.1292183,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_9847cb90_20260923_201646_129271.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_9847cb90_20260923_201646_129271.jpg"
+  },
+  {
+    "id": "d7e56efcbeff41ff9fb98c606c0a4d79",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.429
+    },
+    "timestamp": "2026-09-23 20:16:42",
+    "created_at_ts": 1790174802.5851943,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_7d3c5dda_20260923_201642_585235.jpg",
+    "screenshot_url": "/uploads/incidents/fire_7d3c5dda_20260923_201642_585235.jpg"
+  },
+  {
+    "id": "7b50fb4d66f94eb1bbc981924907012d",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.607
+    },
+    "timestamp": "2026-09-23 20:16:32",
+    "created_at_ts": 1790174792.4018192,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_1f8a0cd7_20260923_201632_401863.jpg",
+    "screenshot_url": "/uploads/incidents/fire_1f8a0cd7_20260923_201632_401863.jpg"
+  },
+  {
+    "id": "01cdcbb152cf4e01b2cc8b94837e21b2",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.276
+    },
+    "timestamp": "2026-09-23 20:16:26",
+    "created_at_ts": 1790174786.9237297,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_2d4ec135_20260923_201626_923762.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_2d4ec135_20260923_201626_923762.jpg"
+  },
+  {
+    "id": "bc07f5d770d144eda59fe499b53495a1",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.743
+    },
+    "timestamp": "2026-09-23 20:16:22",
+    "created_at_ts": 1790174782.3791516,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_7ad9ccf6_20260923_201622_379191.jpg",
+    "screenshot_url": "/uploads/incidents/fire_7ad9ccf6_20260923_201622_379191.jpg"
+  },
+  {
+    "id": "bc9911a0ce264444b458c4116533d04e",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.349
+    },
+    "timestamp": "2026-09-23 20:16:12",
+    "created_at_ts": 1790174772.1824393,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_2a8526f8_20260923_201612_182479.jpg",
+    "screenshot_url": "/uploads/incidents/fire_2a8526f8_20260923_201612_182479.jpg"
+  },
+  {
+    "id": "9064f26f9d594f9c846d8f3b3f8fd2c6",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.71
+    },
+    "timestamp": "2026-09-23 20:16:02",
+    "created_at_ts": 1790174761.999681,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_cc887350_20260923_201601_999719.jpg",
+    "screenshot_url": "/uploads/incidents/fire_cc887350_20260923_201601_999719.jpg"
+  },
+  {
+    "id": "f7394f55f84844b1ae1a1c06bdef47d4",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.595
+    },
+    "timestamp": "2026-09-23 20:15:51",
+    "created_at_ts": 1790174751.881528,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_cd819850_20260923_201551_881571.jpg",
+    "screenshot_url": "/uploads/incidents/fire_cd819850_20260923_201551_881571.jpg"
+  },
+  {
+    "id": "cc362fc9b3a64798af103b872b61e084",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.257
+    },
+    "timestamp": "2026-09-23 20:15:41",
+    "created_at_ts": 1790174741.728944,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_9aa21955_20260923_201541_728965.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_9aa21955_20260923_201541_728965.jpg"
+  },
+  {
+    "id": "b82401e2ec86412181c12c7a20d85c48",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.821
+    },
+    "timestamp": "2026-09-23 20:15:41",
+    "created_at_ts": 1790174741.691862,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_376cedd2_20260923_201541_691909.jpg",
+    "screenshot_url": "/uploads/incidents/fire_376cedd2_20260923_201541_691909.jpg"
+  },
+  {
+    "id": "1742417365c849678e70b8587cb5cd2b",
+    "type": "SMOKE",
+    "source": "video",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.609
+    },
+    "timestamp": "2026-09-23 20:15:31",
+    "created_at_ts": 1790174731.68692,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_196617dc_20260923_201531_686949.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_196617dc_20260923_201531_686949.jpg"
+  },
+  {
+    "id": "b752f13b390f4f8c98f3c2060e7de73b",
+    "type": "FIRE",
+    "source": "video",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.826
+    },
+    "timestamp": "2026-09-23 20:15:31",
+    "created_at_ts": 1790174731.6425288,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_02ac1d80_20260923_201531_642580.jpg",
+    "screenshot_url": "/uploads/incidents/fire_02ac1d80_20260923_201531_642580.jpg"
+  },
+  {
+    "id": "f1a6e05e832c49acb473cc315a443d58",
+    "type": "SMOKE",
+    "source": "image",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.517
+    },
+    "timestamp": "2026-09-23 20:13:56",
+    "created_at_ts": 1790174636.0102987,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_6a04eea7_20260923_201356_010328.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_6a04eea7_20260923_201356_010328.jpg"
+  },
+  {
+    "id": "5cf2716668ab498fa86aa5009c16eb13",
+    "type": "FIRE",
+    "source": "image",
+    "severity": "CRITICAL",
+    "message": "Fire detected",
+    "details": {
+      "confidence": 0.8
+    },
+    "timestamp": "2026-09-23 20:13:56",
+    "created_at_ts": 1790174635.9990919,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\Downloads\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_60a00155_20260923_201355_999134.jpg",
+    "screenshot_url": "/uploads/incidents/fire_60a00155_20260923_201355_999134.jpg"
+  }
+]
