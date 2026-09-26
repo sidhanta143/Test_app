@@ -9,6 +9,7 @@ import LiveDetection from './pages/LiveDetection';
 import VideoAudit from './pages/VideoAudit';
 import IncidentArchive from './pages/IncidentArchive';
 import Dashboard from './pages/Dashboard';
+import Analytics from "./pages/Analytics";
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/live" element={<LiveDetection />} />
             <Route path="/video" element={<VideoAudit />} />
             <Route path="/incident-archive" element={<IncidentArchive />} />
+            <Route path="/analytics" element={<Analytics />} />
           </Routes>
         </main>
         <Footer />
