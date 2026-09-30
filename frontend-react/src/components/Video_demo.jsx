@@ -7,7 +7,7 @@ import {
   Activity
 } from "lucide-react";
 
-import video from "../assets/annotated_video-2.mp4";
+import video from "../assets/video-3.mp4";
 
 export default function Header({ onOpenModal }) {
   return (
@@ -36,6 +36,8 @@ export default function Header({ onOpenModal }) {
               >
                 Your browser does not support video playback.
               </video>
+
+
 
 
 

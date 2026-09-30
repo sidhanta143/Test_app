@@ -11,6 +11,8 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from email.message import EmailMessage
 from pathlib import Path
+from math import radians, sin, cos, sqrt, atan2
+import mimetypes
 
 import cv2
 import numpy as np
@@ -35,6 +37,10 @@ from backend.config import (
     SMTP_SERVER,
     SMTP_USERNAME,
     UPLOAD_DIR,
+    SITE_ADDRESS, 
+    GOOGLE_MAPS_URL, 
+    SITE_LATITUDE, 
+    SITE_LONGITUDE,
 )
 from backend.detection_engine import SafetyComplianceEngine
 
@@ -110,8 +116,18 @@ def save_screenshot(frame, label):
     return None
 
 
+def calculate_distance_km(lat1, lon1, lat2, lon2):
+    """Calculate the great-circle distance between two points on the earth (in kilometers)."""
+    R = 6371.0  # Earth radius in kilometers
+    dlat = radians(lat2 - lat1)
+    dlon = radians(lon2 - lon1)
+    a = sin(dlat / 2)**2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2)**2
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+    return R * c
+
+
 def send_incident_email(incident):
-    """Send a safety alert email with the violation text and captured evidence image."""
+    """Send a safety alert email with violation details, exact GPS coordinates, distance deviation, and captured evidence image."""
     if not ALERT_EMAIL_TO or not SMTP_USERNAME or not SMTP_PASSWORD:
         return
 
@@ -120,39 +136,126 @@ def send_incident_email(incident):
         missing = details.get("missing") or []
         missing_text = ", ".join(missing) if missing else incident.get("message", "Safety event detected")
         screenshot_path = incident.get("screenshot_path")
+        source = incident.get("source", "unknown")
+        incident_type = incident.get("type", "Unknown Event")
+        severity = incident.get("severity", "UNKNOWN")
+        timestamp = incident.get("timestamp", "")
+        message_text = incident.get("message", "")
 
-        subject = f"SafeScan360 Alert - {incident['type']}"
+        subject = f"SafeScan360 Alert - {incident_type}"
         if missing:
             subject += f": {missing_text}"
 
+        lat_str = SITE_LATITUDE.strip() if SITE_LATITUDE else ""
+        lon_str = SITE_LONGITUDE.strip() if SITE_LONGITUDE else ""
+        coordinates_text = f"{lat_str}, {lon_str}" if (lat_str and lon_str) else "Coordinates not configured"
+
+        # Calculate traveling distance deviation if mobile/current lat & lon are provided in details
+        current_lat = details.get("latitude")
+        current_lon = details.get("longitude")
+        distance_text = ""
+        if current_lat and current_lon and lat_str and lon_str:
+            try:
+                dist_km = calculate_distance_km(
+                    float(lat_str), float(lon_str),
+                    float(current_lat), float(current_lon)
+                )
+                if dist_km < 1.0:
+                    distance_text = f"{int(dist_km * 1000)} meters away from base"
+                else:
+                    distance_text = f"{dist_km:.2f} km away from base"
+            except ValueError:
+                pass
+
+        # --- 1. Plain Text Body Fallback ---
         body = (
             "SafeScan360 Safety Alert\n\n"
-            f"Event: {incident['type']}\n"
-            f"Severity: {incident.get('severity', 'UNKNOWN')}\n"
-            f"Source: {incident.get('source', 'unknown')}\n"
-            f"Time: {incident.get('timestamp', '')}\n"
+            f"Event: {incident_type}\n"
+            f"Severity: {severity}\n"
+            f"Source: {source}\n"
+            f"Time: {timestamp}\n"
         )
+
+        if source == "live":
+            body += (
+                f"\n📍 Construction Site: {SITE_ADDRESS}\n"
+                f"🎯 Exact Coordinates: {coordinates_text}\n"
+            )
+            if distance_text:
+                body += f"📏 Distance Deviation: {distance_text}\n"
+            body += f"🗺️ Google Maps Location: {GOOGLE_MAPS_URL if GOOGLE_MAPS_URL else 'Coordinates not configured'}\n"
+
         if details.get("worker_id"):
             body += f"Worker: {details['worker_id']}\n"
         if missing:
             body += f"Missing / not detected with explicit violation evidence: {missing_text}\n"
-        body += f"\nMessage: {incident.get('message', '')}\n\nThe attached image is the captured evidence frame."
+        if message_text:
+            body += f"\nMessage: {message_text}\n"
+            
+        body += "\nThe attached image is the captured evidence frame."
+
+        # --- 2. Rich HTML Body ---
+        html_body = f"""
+        <html>
+          <body style="font-family: Arial, sans-serif; color: #333;">
+            <h2 style="color: #d9534f; margin-bottom: 5px;">SafeScan360 Safety Alert</h2>
+            <hr style="border: 0; border-top: 2px solid #d9534f; margin-top: 0;" />
+            <p><b>Event:</b> {incident_type}</p>
+            <p><b>Severity:</b> <span style="color: #d9534f;">{severity}</span></p>
+            <p><b>Source:</b> {source}</p>
+            <p><b>Time:</b> {timestamp}</p>
+        """
+
+        if source == "live":
+            html_body += f"""
+            <div style="background-color: #f9f9f9; padding: 12px; border-radius: 6px; margin: 15px 0; border-left: 4px solid #0275d8;">
+              <p style="margin: 0 0 8px 0;"><b>📍 Construction Site:</b> {SITE_ADDRESS}</p>
+              <p style="margin: 0 0 8px 0;"><b>🎯 Exact Coordinates:</b> <code>{coordinates_text}</code></p>
+            """
+            if distance_text:
+                html_body += f"""<p style="margin: 0 0 8px 0; color: #d9534f;"><b>📏 Distance Deviation:</b> {distance_text}</p>"""
+            
+            if GOOGLE_MAPS_URL:
+                html_body += f"""
+              <p style="margin: 10px 0 0 0;">
+                <a href="{GOOGLE_MAPS_URL}" target="_blank" style="background-color: #0275d8; color: white; padding: 10px 18px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">
+                  🗺️ Open Exact Pin in Google Maps
+                </a>
+              </p>
+            """
+            html_body += "</div>"
+
+        if details.get("worker_id"):
+            html_body += f"<p><b>Worker ID:</b> {details['worker_id']}</p>"
+        if missing:
+            html_body += f"<p><b>Missing PPE / Violation Evidence:</b> {missing_text}</p>"
+        if message_text:
+            html_body += f"<p><b>Message:</b> {message_text}</p>"
+
+        html_body += """
+            <p style="color: #666; font-size: 0.9em; margin-top: 25px;"><em>The attached image is the captured evidence frame.</em></p>
+          </body>
+        </html>
+        """
 
         msg = EmailMessage()
         msg["Subject"] = subject
         msg["From"] = SMTP_USERNAME
         msg["To"] = ALERT_EMAIL_TO
+        
         msg.set_content(body)
+        msg.add_alternative(html_body, subtype="html")
 
-        # Attach the exact annotated evidence frame captured when the alert was created.
         if screenshot_path:
             image_path = Path(screenshot_path)
             if image_path.is_file():
                 image_data = image_path.read_bytes()
+                mime_type, _ = mimetypes.guess_type(str(image_path))
+                maintype, subtype = (mime_type.split("/") if mime_type else ("image", "jpeg"))
                 msg.add_attachment(
                     image_data,
-                    maintype="image",
-                    subtype="jpeg",
+                    maintype=maintype,
+                    subtype=subtype,
                     filename=image_path.name,
                 )
 
@@ -161,7 +264,6 @@ def send_incident_email(incident):
             server.send_message(msg)
         print(f"[EMAIL] Alert sent to {ALERT_EMAIL_TO}: {subject}")
     except Exception as exc:
-        # Detection must continue even if an email provider is temporarily unavailable.
         print(f"[EMAIL ERROR] {exc}")
 
 
@@ -189,7 +291,6 @@ def register_incident(kind, message, severity, source, frame=None, details=None,
         }
         incident_store.insert(0, incident)
         save_incidents()
-    # Never block live/video inference while SMTP is sending.
     email_executor.submit(send_incident_email, incident)
     return incident
 
@@ -339,7 +440,6 @@ def process_video_job(job_id: str, raw_path: Path):
             ret, frame = cap.read()
             if not ret: break
             if frame_idx % max(1, __import__('backend.config', fromlist=['FRAME_SKIP']).FRAME_SKIP) != 0:
-                # Keep temporal continuity by writing the original frame on skipped frames.
                 writer.write(frame)
                 frame_idx += 1
                 continue
@@ -376,7 +476,6 @@ def process_video_job(job_id: str, raw_path: Path):
 
     ok, ffmpeg_info = transcode_to_browser_mp4(temp_path, final_path)
     if not ok:
-        # mp4v is still a valid fallback for local OpenCV playback; tell frontend clearly.
         os.replace(temp_path, final_path)
         ffmpeg_used = False
     else:
@@ -463,7 +562,6 @@ async def detect_live(file: UploadFile = File(...)):
     return {"image": "data:image/jpeg;base64," + base64.b64encode(buf).decode(), "stats": result}
 
 
-# Kept for backward compatibility, but browser live mode uses /api/detect/live.
 def legacy_camera_stream():
     global latest_live_stats
     cap = cv2.VideoCapture(0)
