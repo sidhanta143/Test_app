@@ -28,6 +28,10 @@ from backend.config import (
     ALLOWED_VIDEO_EXTENSIONS,
     BASE_DIR,
     CONTINUOUS_VIOLATION_SECONDS,
+    CAMERA_RTSP_URL,
+    RTSP_TRANSPORT,
+    LIVE_FPS,
+    LIVE_JPEG_QUALITY,
     FIRE_SMOKE_MODEL_PATH,
     INCIDENT_DIR,
     INCIDENT_RETENTION_HOURS,
@@ -548,6 +552,7 @@ def video_result(job_id: str):
 
 @app.post("/api/detect/live")
 async def detect_live(file: UploadFile = File(...)):
+    """Legacy single-frame endpoint kept for compatibility with older clients."""
     global latest_live_stats
     data = await file.read(4 * 1024 * 1024)
     frame = cv2.imdecode(np.frombuffer(data, np.uint8), cv2.IMREAD_COLOR)
@@ -557,29 +562,132 @@ async def detect_live(file: UploadFile = File(...)):
     latest_live_stats = result
     latest_live_stats["latency_ms"] = result["processing_ms"]
     apply_alerts(result, annotated, "live")
-    ok, buf = cv2.imencode(".jpg", annotated, [cv2.IMWRITE_JPEG_QUALITY, 80])
-    if not ok: raise HTTPException(status_code=500, detail="Could not encode live result")
+    ok, buf = cv2.imencode(".jpg", annotated, [cv2.IMWRITE_JPEG_QUALITY, LIVE_JPEG_QUALITY])
+    if not ok:
+        raise HTTPException(status_code=500, detail="Could not encode live result")
     return {"image": "data:image/jpeg;base64," + base64.b64encode(buf).decode(), "stats": result}
 
 
-def legacy_camera_stream():
-    global latest_live_stats
-    cap = cv2.VideoCapture(0)
-    if not cap.isOpened():
-        return
+def open_rtsp_camera():
+    """Open the configured CP Plus RTSP stream, preferring TCP transport."""
+    if not CAMERA_RTSP_URL:
+        raise RuntimeError(
+            "CAMERA_RTSP_URL is not configured. Add the CP Plus RTSP URL to .env."
+        )
+
+    if RTSP_TRANSPORT in {"tcp", "udp"}:
+        os.environ["OPENCV_FFMPEG_CAPTURE_OPTIONS"] = f"rtsp_transport;{RTSP_TRANSPORT}"
+
+    cap = None
     try:
+        cap = cv2.VideoCapture(CAMERA_RTSP_URL, cv2.CAP_FFMPEG)
+    except Exception:
+        cap = None
+
+    if cap is None or not cap.isOpened():
+        if cap is not None:
+            cap.release()
+        cap = cv2.VideoCapture(CAMERA_RTSP_URL)
+
+    if not cap.isOpened():
+        if cap is not None:
+            cap.release()
+        raise RuntimeError("Could not connect to the CP Plus RTSP stream. Check IP, username, password, RTSP path and network connection.")
+
+    # Reduce buffering where the backend/OpenCV build supports it.
+    try:
+        cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+    except Exception:
+        pass
+    return cap
+
+
+def cpplus_camera_stream():
+    """Read CP Plus RTSP frames, run SafeScan360 AI, and stream MJPEG to the dashboard."""
+    global latest_live_stats
+    cap = None
+    frame_interval = 1.0 / max(1, LIVE_FPS)
+
+    try:
+        cap = open_rtsp_camera()
+        last_emit = 0.0
+        consecutive_failures = 0
+
         while True:
             ok, frame = cap.read()
-            if not ok: break
+            if not ok or frame is None:
+                consecutive_failures += 1
+                if consecutive_failures >= 20:
+                    break
+                time.sleep(0.05)
+                continue
+
+            consecutive_failures = 0
+            now = time.perf_counter()
+            if now - last_emit < frame_interval:
+                continue
+            last_emit = now
+
+            started = time.perf_counter()
             annotated, result = engine.process_frame(frame)
+            result["latency_ms"] = round((time.perf_counter() - started) * 1000, 1)
+            result["fps"] = LIVE_FPS
+            result["camera_source"] = "CP Plus RTSP"
             latest_live_stats = result
-            ok, buf = cv2.imencode(".jpg", annotated)
-            if not ok: continue
-            yield b"--frame\r\nContent-Type: image/jpeg\r\n\r\n" + buf.tobytes() + b"\r\n"
+
+            if result.get("fire") or result.get("smoke") or result.get("violations"):
+                apply_alerts(result, annotated, "live")
+
+            ok, buf = cv2.imencode(
+                ".jpg", annotated, [cv2.IMWRITE_JPEG_QUALITY, LIVE_JPEG_QUALITY]
+            )
+            if not ok:
+                continue
+
+            yield (
+                b"--frame\r\n"
+                b"Content-Type: image/jpeg\r\n\r\n"
+                + buf.tobytes()
+                + b"\r\n"
+            )
+    except GeneratorExit:
+        pass
+    except Exception as exc:
+        print(f"[CP PLUS RTSP ERROR] {exc}")
+        latest_live_stats = {
+            **latest_live_stats,
+            "camera_source": "CP Plus RTSP",
+            "camera_error": str(exc),
+        }
     finally:
-        cap.release()
+        if cap is not None:
+            cap.release()
 
 
+@app.get("/api/camera/status")
+def camera_status():
+    """Return whether a CP Plus RTSP URL is configured without opening the stream."""
+    return {
+        "configured": bool(CAMERA_RTSP_URL),
+        "source": "CP Plus RTSP",
+        "transport": RTSP_TRANSPORT,
+    }
+
+
+@app.get("/api/cpplus/live")
+def cpplus_live():
+    return StreamingResponse(
+        cpplus_camera_stream(),
+        media_type="multipart/x-mixed-replace; boundary=frame",
+        headers={"Cache-Control": "no-cache", "Pragma": "no-cache"},
+    )
+
+
+# Keep the old /video_feed URL working, but now use the CP Plus RTSP stream.
 @app.get("/video_feed")
 def video_feed():
-    return StreamingResponse(legacy_camera_stream(), media_type="multipart/x-mixed-replace; boundary=frame")
+    return StreamingResponse(
+        cpplus_camera_stream(),
+        media_type="multipart/x-mixed-replace; boundary=frame",
+        headers={"Cache-Control": "no-cache", "Pragma": "no-cache"},
+    )

@@ -18,17 +18,22 @@ PPE_MODEL_PATH = BASE_DIR / "best.pt"
 FIRE_SMOKE_MODEL_PATH = BASE_DIR / "Fire_smoke.pt"
 
 # Model configuration
-PPE_CONFIDENCE = float(os.getenv("PPE_CONFIDENCE", "0.25"))
+PPE_CONFIDENCE = float(os.getenv("PPE_CONFIDENCE", "0.40"))
 FIRE_CONFIDENCE = float(os.getenv("FIRE_CONFIDENCE", "0.25"))
 SMOKE_CONFIDENCE = float(os.getenv("SMOKE_CONFIDENCE", "0.25"))
 
-IMG_SIZE = int(os.getenv("IMG_SIZE", "640"))
+IMG_SIZE = int(os.getenv("IMG_SIZE", "416"))
 FRAME_SKIP = max(1, int(os.getenv("FRAME_SKIP", "1")))
 LIVE_FPS = max(1, int(os.getenv("LIVE_FPS", "8")))
 LIVE_JPEG_QUALITY = int(os.getenv("LIVE_JPEG_QUALITY", "80"))
 MAX_UPLOAD_SIZE_MB = int(os.getenv("MAX_UPLOAD_SIZE_MB", "500"))
 
 DEVICE = os.getenv("DEVICE", "auto").strip().lower()
+
+# CP Plus IP camera / RTSP configuration
+# Example: rtsp://username:password@192.168.1.100:554/<stream-path>
+CAMERA_RTSP_URL = os.getenv("CAMERA_RTSP_URL", "").strip()
+RTSP_TRANSPORT = os.getenv("RTSP_TRANSPORT", "tcp").strip().lower()
 
 # Violation and alert configuration
 CONTINUOUS_VIOLATION_SECONDS = float(

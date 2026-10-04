@@ -1,72 +1,324 @@
 [
   {
-    "id": "bd74d737f4d94ad88b6f8d6ba044e188",
+    "id": "461738c7a3804af1b4be28cfc61253e0",
     "type": "SMOKE",
-    "source": "image",
+    "source": "live",
     "severity": "HIGH",
     "message": "Smoke detected",
     "details": {
-      "confidence": 0.677
+      "confidence": 0.477
     },
-    "timestamp": "2026-09-30 07:22:12",
-    "created_at_ts": 1790733132.5183175,
-    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_5bbd67b6_20260930_072212_518339.jpg",
-    "screenshot_url": "/uploads/incidents/smoke_5bbd67b6_20260930_072212_518339.jpg"
+    "timestamp": "2026-10-04 12:41:04",
+    "created_at_ts": 1791097864.1832342,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_b66766b4_20261004_124104_183320.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_b66766b4_20261004_124104_183320.jpg"
   },
   {
-    "id": "f67351c87b604098878aeb8de953d539",
+    "id": "8bbc428da36740148db52576f21c582b",
     "type": "SMOKE",
-    "source": "image",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.251
+    },
+    "timestamp": "2026-10-04 12:39:42",
+    "created_at_ts": 1791097782.814475,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_046741c0_20261004_123942_815827.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_046741c0_20261004_123942_815827.jpg"
+  },
+  {
+    "id": "78090976dd424a13b78a4375108595cb",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.604
+    },
+    "timestamp": "2026-10-04 12:39:25",
+    "created_at_ts": 1791097765.5541737,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_db00d9f3_20261004_123925_554235.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_db00d9f3_20261004_123925_554235.jpg"
+  },
+  {
+    "id": "973a4063db2845519964379ca047a7ba",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.498
+    },
+    "timestamp": "2026-10-04 12:38:49",
+    "created_at_ts": 1791097729.6660833,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_42117ed2_20261004_123849_666148.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_42117ed2_20261004_123849_666148.jpg"
+  },
+  {
+    "id": "fbca2fb39f34475ba74da450894d3905",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.295
+    },
+    "timestamp": "2026-10-04 12:38:34",
+    "created_at_ts": 1791097714.6034975,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_fa1fea2e_20261004_123834_603558.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_fa1fea2e_20261004_123834_603558.jpg"
+  },
+  {
+    "id": "feebfefeede94f90aaf7112ec7b9dd49",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.35
+    },
+    "timestamp": "2026-10-04 12:38:14",
+    "created_at_ts": 1791097694.7455173,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_388b5a53_20261004_123814_745616.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_388b5a53_20261004_123814_745616.jpg"
+  },
+  {
+    "id": "6825bbd1023441898fe519afce59567f",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Helmet",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Helmet",
+      "missing": [
+        "No Helmet"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "12:34:28"
+    },
+    "timestamp": "2026-10-04 12:34:28",
+    "created_at_ts": 1791097468.6217673,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_15d790fe_20261004_123428_621826.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_15d790fe_20261004_123428_621826.jpg"
+  },
+  {
+    "id": "e3ea3f23835c45ceb8e5ef60d4e313c8",
+    "type": "SMOKE",
+    "source": "live",
     "severity": "HIGH",
     "message": "Smoke detected",
     "details": {
       "confidence": 0.258
     },
-    "timestamp": "2026-09-30 07:21:28",
-    "created_at_ts": 1790733088.542538,
-    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_aa5d3f07_20260930_072128_542583.jpg",
-    "screenshot_url": "/uploads/incidents/smoke_aa5d3f07_20260930_072128_542583.jpg"
+    "timestamp": "2026-10-04 12:34:26",
+    "created_at_ts": 1791097466.8673987,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_0117207b_20261004_123426_867456.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_0117207b_20261004_123426_867456.jpg"
   },
   {
-    "id": "51b5de9b496f4c8984c27af1497cc032",
-    "type": "FIRE",
-    "source": "image",
-    "severity": "CRITICAL",
-    "message": "Fire detected",
-    "details": {
-      "confidence": 0.672
-    },
-    "timestamp": "2026-09-30 07:21:28",
-    "created_at_ts": 1790733088.5373793,
-    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_19fe46f2_20260930_072128_537408.jpg",
-    "screenshot_url": "/uploads/incidents/fire_19fe46f2_20260930_072128_537408.jpg"
-  },
-  {
-    "id": "8f950c8e13bd412885ab2e4c299127e9",
+    "id": "263ec6c8ff7743348e8826564cc2a84b",
     "type": "SMOKE",
-    "source": "image",
+    "source": "live",
     "severity": "HIGH",
     "message": "Smoke detected",
     "details": {
-      "confidence": 0.81
+      "confidence": 0.315
     },
-    "timestamp": "2026-09-30 07:18:32",
-    "created_at_ts": 1790732912.2149282,
-    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\smoke_3fbe67cf_20260930_071832_214977.jpg",
-    "screenshot_url": "/uploads/incidents/smoke_3fbe67cf_20260930_071832_214977.jpg"
+    "timestamp": "2026-10-04 12:34:16",
+    "created_at_ts": 1791097456.7166216,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_3f4bdfcb_20261004_123416_716832.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_3f4bdfcb_20261004_123416_716832.jpg"
   },
   {
-    "id": "e374dcf4292f4345884338a6e0351998",
+    "id": "6216ce63d9fd415fb633aefb5ca8eb3d",
     "type": "FIRE",
     "source": "image",
     "severity": "CRITICAL",
     "message": "Fire detected",
     "details": {
-      "confidence": 0.353
+      "confidence": 0.55
     },
-    "timestamp": "2026-09-30 07:18:32",
-    "created_at_ts": 1790732912.179253,
-    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\SafeScan360-Email-Live-Camera\\uploads\\incidents\\fire_80dcd481_20260930_071832_183371.jpg",
-    "screenshot_url": "/uploads/incidents/fire_80dcd481_20260930_071832_183371.jpg"
+    "timestamp": "2026-10-04 12:34:08",
+    "created_at_ts": 1791097448.4660265,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\fire_955a5763_20261004_123408_466177.jpg",
+    "screenshot_url": "/uploads/incidents/fire_955a5763_20261004_123408_466177.jpg"
+  },
+  {
+    "id": "9626a54b91a949628d8d2ac49b7db391",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.368
+    },
+    "timestamp": "2026-10-04 12:34:06",
+    "created_at_ts": 1791097446.52665,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_41d1a808_20261004_123406_526695.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_41d1a808_20261004_123406_526695.jpg"
+  },
+  {
+    "id": "5aa93ef199e54ad899a4b5cdb76e0c20",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.328
+    },
+    "timestamp": "2026-10-04 12:33:52",
+    "created_at_ts": 1791097432.0009034,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_443d59a9_20261004_123352_000960.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_443d59a9_20261004_123352_000960.jpg"
+  },
+  {
+    "id": "1f4f6304b41e4fa08a4f1aeb7ef6e9c2",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.392
+    },
+    "timestamp": "2026-10-04 12:33:38",
+    "created_at_ts": 1791097418.928863,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_ff443e4b_20261004_123338_928921.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_ff443e4b_20261004_123338_928921.jpg"
+  },
+  {
+    "id": "1093129d2cad4921856d27e6dffc6f93",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Helmet",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Helmet",
+      "missing": [
+        "No Helmet"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "12:33:31"
+    },
+    "timestamp": "2026-10-04 12:33:31",
+    "created_at_ts": 1791097411.440323,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_d5db1cc6_20261004_123331_440379.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_d5db1cc6_20261004_123331_440379.jpg"
+  },
+  {
+    "id": "087949dd533249a3bd232577216026c3",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.299
+    },
+    "timestamp": "2026-10-04 12:33:25",
+    "created_at_ts": 1791097405.4529338,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_c4f168e6_20261004_123325_453000.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_c4f168e6_20261004_123325_453000.jpg"
+  },
+  {
+    "id": "393e9ad711d8457e955c6834406a5866",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Helmet",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Helmet",
+      "missing": [
+        "No Helmet"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "12:14:55"
+    },
+    "timestamp": "2026-10-04 12:14:55",
+    "created_at_ts": 1791096295.932883,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_12344956_20261004_121455_932944.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_12344956_20261004_121455_932944.jpg"
+  },
+  {
+    "id": "e9567670210644afab24f075f10fd9a3",
+    "type": "SMOKE",
+    "source": "live",
+    "severity": "HIGH",
+    "message": "Smoke detected",
+    "details": {
+      "confidence": 0.489
+    },
+    "timestamp": "2026-10-04 12:14:47",
+    "created_at_ts": 1791096287.4046125,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\smoke_3295333f_20261004_121447_404696.jpg",
+    "screenshot_url": "/uploads/incidents/smoke_3295333f_20261004_121447_404696.jpg"
+  },
+  {
+    "id": "07449b42f1f0420395eab4e63c39cd9b",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Helmet",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Helmet",
+      "missing": [
+        "No Helmet"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "12:14:45"
+    },
+    "timestamp": "2026-10-04 12:14:45",
+    "created_at_ts": 1791096285.9006171,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_335a1b13_20261004_121445_900695.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_335a1b13_20261004_121445_900695.jpg"
+  },
+  {
+    "id": "cdaff68352104e39900432a1ffd6b1e9",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Gloves",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Gloves",
+      "missing": [
+        "No Gloves"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "11:35:43"
+    },
+    "timestamp": "2026-10-04 11:35:43",
+    "created_at_ts": 1791093943.182955,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_699cc78f_20261004_113543_182990.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_699cc78f_20261004_113543_182990.jpg"
+  },
+  {
+    "id": "d157542e0ccd4d97b80b4e2a2e0a16a3",
+    "type": "PPE_VIOLATION",
+    "source": "live",
+    "severity": "MEDIUM",
+    "message": "Worker 1: No Helmet",
+    "details": {
+      "type": "PPE_VIOLATION",
+      "severity": "MEDIUM",
+      "message": "Worker 1: No Helmet",
+      "missing": [
+        "No Helmet"
+      ],
+      "worker_id": "W-001",
+      "timestamp": "11:35:33"
+    },
+    "timestamp": "2026-10-04 11:35:33",
+    "created_at_ts": 1791093933.091674,
+    "screenshot_path": "C:\\Users\\G.Sidhanta Dora\\OneDrive\\Desktop\\Safe_scan_360\\SAFESCAN-360\\uploads\\incidents\\ppe_violation_6939c217_20261004_113533_091710.jpg",
+    "screenshot_url": "/uploads/incidents/ppe_violation_6939c217_20261004_113533_091710.jpg"
   }
 ]
